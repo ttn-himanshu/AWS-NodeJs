@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <h1>himanshu</h1>
+    <script>
+        // console.log(axios);
+        // axios.defaults.withCredentials = true;
+
+        // Make a request for a user with a given ID
+        // axios.post('http://localhost:8082/setCookies', { withCredentials: true })
+        //     .then(function (response) {
+        //         // handle success
+        //         console.log(response);
+        //     })
+        //     .catch(function (error) {
+        //         // handle error
+        //         console.log(error);
+        //     })
+        //     .then(function () {
+        //         // always executed
+        //     });
+
+        // axios.get('http://localhost:8082')
+        //     .then(function (response) {
+        //         // handle success
+        //         console.log(response);
+        //     })
+        //     .catch(function (error) {
+        //         // handle error
+        //         console.log(error);
+        //     })
+        //     .then(function () {
+        //         // always executed
+        //     });
+
+        function onChange(event) {
+            // console.log(event);
+            // var blob = new Blob([event.target.files[0]]);
+            var blobUrl = URL.createObjectURL(event.target.files[0]);
+            console.log(blobUrl);
+            // document.getElementById("target").data = blobUrl;
+            //  document.getElementById("target1").src = blobUrl;
+            document.getElementById("target3").src = blobUrl;
+        }
+    </script>
+    <input type="file" onchange="onChange(event)" />
+
+    <embed type="pdf" id="target3" class="embedFileStyle" height="300" width="250"></embed>
+</body>
+
+</html>
